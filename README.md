@@ -52,26 +52,57 @@ incluso il traffico necessario per gli inviti al team e alla crew.
 
 Prima di iniziare, assicurati che **Elite Dangerous e il launcher siano completamente chiusi**.
 
-È indispensabile creare due regole, la prima è quella per il protocollo TCP:
+#### È indispensabile creare due regole, la prima è quella per il protocollo TCP:
 
 1. Premi `Win + R`, scrivi `wf.msc` e premi Invio. Si apre **Windows Defender Firewall con sicurezza avanzata**.
+
+   ![01.windows-esegui](src/01.windows-esegui.png)
 2. Nel pannello di sinistra clicca su **Regole connessioni in entrata**.
+
+   ![02.win-firewall-Inbound.png](src/02.win-firewall-Inbound.png)
 3. Nel pannello di destra clicca su **Nuova regola...**.
+
+   ![03.win-firewall-nuova-regola.png](src/03.win-firewall-nuova-regola.png)
 4. Nella finestra che si apre seleziona **Personalizzata** e clicca Avanti. La modalità personalizzata consente di configurare anche protocollo e ambito.
+
+   ![04.win-firewall-personalizza.png](src/04.win-firewall-personalizza.png)
 5. Seleziona **Questo percorso del programma** e, con **Sfoglia**, individua l'eseguibile del gioco, ad esempio `EliteDangerous64.exe`. Clicca Avanti.
+
+   ![05.win-firewall-percorso-programma.png](src/05.win-firewall-percorso-programma.png)
 6. Nella schermata **Protocollo e porte**, imposta il tipo di protocollo su **TCP**. Clicca Avanti.
+
+   ![06.win-firewall-protocollo-e-porte.png](src/06.win-firewall-protocollo-e-porte.png)
 7. Nella schermata **Ambito**, lascia le impostazioni predefinite su **Qualsiasi indirizzo IP**, sia per gli indirizzi locali sia per quelli remoti. Clicca Avanti.
+
+   ![07.win-firewall-ambito.png](src/07.win-firewall-ambito.png)
 8. Nella schermata **Azione**, seleziona **Consenti la connessione**. Clicca Avanti.
+
+   ![08.win-firewall-operazione.png](src/08.win-firewall-operazione.png)
 9. Nella schermata **Profilo**, lascia spuntate tutte e tre le caselle: **Dominio, Privato e Pubblico**. Clicca Avanti.
+
+   ![09.win-firewall-profilo.png](src/09.win-firewall-profilo.png)
 10. Dai alla regola un nome chiaro, ad esempio **Elite Dangerous: Odyssey executable**, e clicca **Fine**.
 
-Ora crea la seconda regola per il protocollo UDP, senza ripetere tutta la procedura da capo:
+    ![10.win-firewall-nome.png](src/10.win-firewall-nome.png)
+    
+#### Ora crea la seconda regola per il protocollo UDP, senza ripetere tutta la procedura da capo:
 
-11. In **Regole connessioni in entrata**, individua la regola appena creata, fai clic destro su di essa e seleziona **Copia**. Vai quindi nel pannello di destra e clicca su **Incolla**. Windows creerà una copia della regola.
-12. Fai clic destro sulla copia e seleziona **Proprietà**.
-13. Apri la scheda **Protocolli e porte** e modifica **Tipo di protocollo** da **TCP** a **UDP**. Lascia invariati gli altri parametri.
-14. Apri la scheda **Generale** e rinomina la regola, ad esempio, in **Elite Dangerous: Odyssey executable*. Clicca **OK**.
+12. In **Regole connessioni in entrata**, individua la regola appena creata, fai clic destro su di essa e seleziona **Copia**.
+    
+    ![11.win-firewall-copie.png](src/11.win-firewall-copie.png)
+13. Vai quindi nel pannello di destra e clicca su **Incolla**. Windows creerà una copia della regola.
 
+    ![12.win-firewall-incolla.png](src/12.win-firewall-incolla.png)
+14. Fai clic destro sulla copia e seleziona **Proprietà**.
+
+    ![13.win-firewall-poprieta.png](src/13.win-firewall-poprieta.png)
+15. Apri la scheda **Protocolli e porte** e modifica **Tipo di protocollo** da **TCP** a **UDP**. Lascia invariati gli altri parametri.
+
+    ![14.win-firewall-poprieta-protocolli-e-porte.png](src/14.win-firewall-poprieta-protocolli-e-porte.png)
+16. Apri la scheda **Generale** e rinomina la regola, ad esempio, in **Elite Dangerous: Odyssey executable**. Clicca **OK**.
+
+    ![15.win-firewall-poprieta-genarele.png](src/15.win-firewall-poprieta-genarele.png)
+    
 A questo punto dovresti avere due regole in entrata attive per l'eseguibile del gioco: una per TCP e una per UDP.
 
 *Nota: se hai sia la versione base che quella Odyssey installate come eseguibili separati, ripeti la procedura per ogni `.exe` utilizzato effettivamente per giocare.*
